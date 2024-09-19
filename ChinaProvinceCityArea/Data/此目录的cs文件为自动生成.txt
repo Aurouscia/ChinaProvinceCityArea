@@ -1,0 +1,2 @@
+1.在MigrationSource目录内运行npm install
+2.运行控制台应用ChinaProvinceCityAreaMigrator，即可生成代码文件。
