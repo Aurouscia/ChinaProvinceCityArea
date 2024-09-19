@@ -12,6 +12,8 @@ res.ProvinceName
 res.CityName
 res.AreaName
 ```
+返回的```CityName```可能为null（直辖市（京津）和省直辖区县（仙桃、神农架））  
+```ProvinceName```/```AreaName```不可能为null，若为null说明提供的地区代码有误
 
 ## 声明
 数据来自npm包 ```@province-city-china```  
