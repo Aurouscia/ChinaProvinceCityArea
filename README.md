@@ -16,6 +16,9 @@ res.AreaName
 420000 => { 湖北省 null null }  
 420100 => { 湖北省 武汉市 null }  
 420102 => { 湖北省 武汉市 江岸区 }  
+428888 => null
+500238 => { 重庆市 市辖区 巫溪县 }
+429021 => { 湖北省 直辖区县 神农架林区 }
 
 ## 声明
 数据来自npm包 ```@province-city-china```  
@@ -29,6 +32,12 @@ https://github.com/uiwjs/province-city-china
 添加五个直辖市（重庆算两个）下属的虚拟地级市：  
 110100, 120100, 310100, 500100, 500200  
 起名为“市辖区”
+
+## 目录结构
+ChinaProvinceCityArea：数据和简易查询工具  
+ChinaProvinceCityArea.Migrator：数据迁移脚本  
+ChinaProvinceCityArea.Test：单元测试  
+MigrationSource：引用了上述npm包的package.json，npm install后即可从node_modules迁移数据
 
 ## License
 MIT
