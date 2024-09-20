@@ -5,7 +5,7 @@ namespace ChinaProvinceCityArea.Migrator.Types
     /// <summary>
     /// 省市区的属性交集
     /// </summary>
-    internal class Division
+    public class Division
     {
         [JsonPropertyName("code")]
         public string Code { get; set; } = string.Empty;

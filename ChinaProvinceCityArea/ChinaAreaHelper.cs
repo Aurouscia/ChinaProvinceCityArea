@@ -10,7 +10,7 @@ namespace ChinaProvinceCityArea
         /// <summary>
         /// 获取省市区名称
         /// </summary>
-        /// <param name="code">6位行政区划代码，不需要市或区填00</param>
+        /// <param name="areaCode">6位行政区划代码，不需要市或区填00</param>
         /// <returns>行政区划名称</returns>
         /// <exception cref="InvalidOperationException"></exception>
         public static ChinaAreaHelperResult Get(int areaCode)
@@ -30,10 +30,22 @@ namespace ChinaProvinceCityArea
             };
         }
     }
+    /// <summary>
+    /// 获取行政区划名称结果
+    /// </summary>
     public class ChinaAreaHelperResult
     {
+        /// <summary>
+        /// 省级行政区名
+        /// </summary>
         public string? ProvinceName { get; set; }
+        /// <summary>
+        /// 地级行政区名
+        /// </summary>
         public string? CityName { get; set; }
+        /// <summary>
+        /// 县级行政区名
+        /// </summary>
         public string? AreaName { get; set; }
     }
 }

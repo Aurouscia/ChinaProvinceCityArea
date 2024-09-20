@@ -12,12 +12,23 @@ res.ProvinceName
 res.CityName
 res.AreaName
 ```
-返回的```CityName```可能为null（直辖市（京津）和省直辖区县（仙桃、神农架））  
-```ProvinceName```/```AreaName```不可能为null，若为null说明提供的地区代码有误
+
+420000 => { 湖北省 null null }  
+420100 => { 湖北省 武汉市 null }  
+420102 => { 湖北省 武汉市 江岸区 }  
 
 ## 声明
 数据来自npm包 ```@province-city-china```  
-https://github.com/uiwjs/province-city-china
+https://github.com/uiwjs/province-city-china  
+
+### 其基础上改动
+四个省直辖区县：  
+429000, 469000, 659000, 419000  
+改名为“直辖区县”  
+  
+添加五个直辖市（重庆算两个）下属的虚拟地级市：  
+110100, 120100, 310100, 500100, 500200  
+起名为“市辖区”
 
 ## License
 MIT

@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ChinaProvinceCityArea.Migrator\ChinaProvinceCityArea.Migrator.csproj" />
     <ProjectReference Include="..\ChinaProvinceCityArea\ChinaProvinceCityArea.csproj" />
   </ItemGroup>
 
