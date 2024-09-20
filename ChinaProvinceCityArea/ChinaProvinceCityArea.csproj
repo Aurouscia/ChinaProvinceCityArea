@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <Title>ChinaProvinceCityArea</Title>
     <Authors>Aurouscia</Authors>
-    <Description>中华人民共和国行政区划数据</Description>
+    <Description>中华人民共和国行政区划数据（精确到区县）</Description>
     <PackageProjectUrl>https://github.com/Aurouscia/ChinaProvinceCityArea</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Aurouscia/ChinaProvinceCityArea</RepositoryUrl>
@@ -14,7 +14,7 @@
     <PackageTags>中国;China;province;city;area;district;region</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Version>0.0.2</Version>
+    <Version>0.1.0</Version>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
