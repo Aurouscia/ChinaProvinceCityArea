@@ -13,26 +13,16 @@ namespace ChinaProvinceCityArea
         /// <param name="areaCode">6位行政区划代码，不需要市或区填00</param>
         /// <returns>行政区划名称</returns>
         /// <exception cref="InvalidOperationException"></exception>
-        public static ChinaAreaHelperResult? Get(int areaCode)
+        public static ChinaAreaHelperResult Get(int areaCode)
         {
             if (areaCode > 999999 || areaCode < 100000)
                 throw new InvalidOperationException("行政区划代码应为6位");
             int provinceCode = areaCode / 10000 * 10000;
             int cityCode = areaCode / 100 * 100;
 
-            bool onlyProvince = areaCode % 10000 == 0;
-            bool onlyProvinceCity = areaCode % 100 == 0;
-
             ProvinceData.Data.TryGetValue(provinceCode, out string? provinceName);
             CityData.Data.TryGetValue(cityCode, out string? cityName);
             AreaData.Data.TryGetValue(areaCode, out string? areaName);
-
-            if(provinceName is null)
-                return null;
-            if (!onlyProvince && cityName is null)
-                return null;
-            if (!onlyProvinceCity && areaName is null)
-                return null;
 
             return new ChinaAreaHelperResult()
             {

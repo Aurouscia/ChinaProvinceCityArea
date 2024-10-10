@@ -27,18 +27,21 @@ namespace ChinaProvinceCityArea.Test
         }
 
         [TestMethod]
-        [DataRow(880000)]
-        [DataRow(880100)]
-        [DataRow(880102)]
-        [DataRow(428800)]
-        [DataRow(428802)]
-        [DataRow(420188)]
-        [DataRow(420088)]
-        [DataRow(428888)]
-        public void GetNamesByWrongCode(int code)
+        [DataRow(880000, true, true, true)]
+        [DataRow(880100, true, true, true)]
+        [DataRow(880102, true, true, true)]
+        [DataRow(428800, false, true, true)]
+        [DataRow(428802, false, true, true)]
+        [DataRow(420188, false, false, true)]
+        [DataRow(420088, false, true, true)]
+        [DataRow(428888, false, true, true)]
+        public void GetNamesByWrongCode(int code, bool provNull, bool cityNull, bool areaNull)
         {
             var res = ChinaAreaHelper.Get(code);
-            Assert.IsNull(res);
+            Assert.IsNotNull(res);
+            Assert.AreEqual(provNull, res.ProvinceName is null);
+            Assert.AreEqual(cityNull, res.CityName is null);
+            Assert.AreEqual(areaNull, res.AreaName is null);
         }
 
         [TestMethod]
