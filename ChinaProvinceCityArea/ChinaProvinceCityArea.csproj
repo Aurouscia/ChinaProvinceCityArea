@@ -14,7 +14,7 @@
     <PackageTags>中国;China;province;city;area;district;region</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Version>0.2.0</Version>
+    <Version>0.2.1</Version>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 

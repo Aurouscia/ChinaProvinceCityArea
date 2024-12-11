@@ -46,13 +46,11 @@ namespace ChinaProvinceCityArea.Test
 
         [TestMethod]
         [DataRow(42010)]
+        [DataRow(020102)]
         [DataRow(4201020)]
-        public void GetNamesByCodeShouldThrow(int code)
+        public void GetNamesByCodeShouldReturnNull(int code)
         {
-            Assert.ThrowsException<InvalidOperationException>(() =>
-            {
-                ChinaAreaHelper.Get(code);
-            });
+            Assert.IsNull(ChinaAreaHelper.Get(code));
         }
     }
 }
