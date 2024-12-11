@@ -11,8 +11,7 @@ namespace ChinaProvinceCityArea
         /// 获取省市区名称
         /// </summary>
         /// <param name="areaCode">6位行政区划代码，不需要市或区填00</param>
-        /// <returns>行政区划名称</returns>
-        /// <exception cref="InvalidOperationException"></exception>
+        /// <returns>行政区划名称对象，或null(如果输入不为6位数)</returns>
         public static ChinaAreaHelperResult? Get(int areaCode)
         {
             if (areaCode > 999999 || areaCode < 100000)
